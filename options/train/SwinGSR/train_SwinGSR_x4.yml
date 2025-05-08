@@ -2,7 +2,7 @@
 name: train_SwinIR_SRx4_scratch_P48W8_DIV2K_500k_B4G8
 model_type: SwinIRModel
 scale: 4
-num_gpu: 1
+num_gpu: auto
 manual_seed: 0
 
 # dataset and data loader settings
@@ -10,8 +10,8 @@ datasets:
   train:
     name: DIV2K
     type: PairedImageDataset
-    dataroot_gt: datasets/DIV2K_train_HR
-    dataroot_lq: datasets/DIV2K_train_LR_bicubicx4
+    dataroot_gt: F:/BasicSR-master/datasets/DIV2K/DIV2K_train_HR
+    dataroot_lq: F:/BasicSR-master/datasets/DIV2K/DIV2K_train_LR_bicubic/X4
    # meta_info_file: basicsr/data/meta_info/meta_info_DIV2K800sub_GT.txt
     filename_tmpl: '{}'
     io_backend:
@@ -30,14 +30,14 @@ datasets:
   val:
     name: Set5
     type: PairedImageDataset
-    dataroot_gt: datasets/Set5/GTmod12
-    dataroot_lq: datasets/Set5/LRbicx4
+    dataroot_gt: F:/BasicSR-master/datasets/Set5/GTmod12
+    dataroot_lq: F:/BasicSR-master/datasets/Set5/LRbicx4
     io_backend:
       type: disk
 
 # network structures
 network_g:
-  type: SwinGIR
+  type: SwinIR
   upscale: 4
   in_chans: 3
   img_size: 48
@@ -78,12 +78,10 @@ train:
     type: L1Loss
     loss_weight: 1.0
     reduction: mean
-
   grad_opt:
     type: L1Loss
     loss_weight: 0.5
     reduction: mean
-
 # validation settings
 val:
   val_freq: !!float 5e3

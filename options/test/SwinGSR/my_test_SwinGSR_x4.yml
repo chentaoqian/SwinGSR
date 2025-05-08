@@ -10,24 +10,24 @@ datasets:
   test_1:  # the 1st test dataset
     name: set5
     type: PairedImageDataset
-    dataroot_gt: datasets/face/HR
-    dataroot_lq: datasets/face/bicubic
+    dataroot_gt: 
+    dataroot_lq: 
     filename_temp1: '{}x4'
     io_backend:
       type: disk
-  # test_2:  # the 2nd test dataset
+  # test_2:  
   #   name: set14
   #   type: PairedImageDataset
-  #   dataroot_gt: F:/BasicSR-master/datasets/Set14/GTmod12
-  #   dataroot_lq: F:/BasicSR-master/datasets/Set14/LRbicx4
+  #   dataroot_gt: 
+  #   dataroot_lq:
   #   io_backend:
   #     type: disk
 
-  # test_3:  # the 2nd test dataset
+  # test_3: 
   #   name: BSD100
   #   type: PairedImageDataset
-  #   dataroot_gt: F:/BasicSR-master/datasets/B100/HR
-  #   dataroot_lq: F:/BasicSR-master/datasets/B100/LR_bicubic/X4
+  #   dataroot_gt:
+  #   dataroot_lq: 
   #   filename_tmpl: '{}x4'
   #   io_backend:
   #     type: disk
@@ -35,8 +35,8 @@ datasets:
   # test_4:  # the 2nd test dataset
   #   name: Urban100
   #   type: PairedImageDataset
-  #   dataroot_gt: F:/BasicSR-master/datasets/Urban100/HR
-  #   dataroot_lq: F:/BasicSR-master/datasets/Urban100/LR_bicubic/X4
+  #   dataroot_gt:
+  #   dataroot_lq: 
   #   filename_tmpl: '{}x4'
   #   io_backend:
   #     type: disk

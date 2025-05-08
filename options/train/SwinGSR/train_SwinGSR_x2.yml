@@ -78,7 +78,10 @@ train:
     type: L1Loss
     loss_weight: 1.0
     reduction: mean
-
+  grad_opt:
+    type: L1Loss
+    loss_weight: 0.5
+    reduction: mean
 # validation settings
 val:
   val_freq: !!float 5e3
