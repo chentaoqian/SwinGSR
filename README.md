@@ -33,5 +33,5 @@ python setup.py develop
 
 ## Acknowledgements
 
-This code is built on  [SwinGSR]([https://github.com/zhengchen1999/DAT.git](https://github.com/JingyunLiang/SwinIR/tree/main)).
+This code is built on  [SwinIR]([https://github.com/zhengchen1999/DAT.git](https://github.com/JingyunLiang/SwinIR/tree/main)).
 
